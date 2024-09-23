@@ -11,5 +11,5 @@ num_terms = int(input("Enter the number of terms to generate: "))
 
 # generate and print the Fibonacci series
 for i in range(1, num_terms+1):
-  print(fibonacci(i), end=" ")
+  print(fibonacci(12), end=" ")
 
