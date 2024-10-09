@@ -25,45 +25,46 @@ class Library
        print(f"{book} has been added to the book list.")
 
     def returnBook(self, book):
-        if book in self.lendDict:
+         if book in self.lendDict:
           del self.lendDict[book]
           print("Book has been returned")
-        else:
+         else:
            print("That  book wasn't borrowed from us.")
 
-if __name__ == '__main__':
-   books = Library([
+         if __name__ == '__main__':
+           books = Library([
       'Python', 'Rich Dad Poor Dad', 'Harry Potter', 'C++ Basics',
       'Algorithms by CLRS'
    ], "Let's Upskilled")
-   user_name = input("Welcome to our library! Please enter your name:")
+         user_name = input("Welcome to our library! Please enter your name:")
 
-    while True:
-      print(
+while True:
+            print(
          f"\nHello {user_name}, welcome to the {books.name} library. Please choose an option:"
       )
-      print(
+            print(
          "1. Display Books\n2. Lend a Book\n3. Add a Book\n4. Return a book\n5. Quit"
       )
-      user_choice = input("Enter your choice to continue:")
+         
+user_choice = input("Enter your choice to continue:")
 
-      if user_choice == '1':
+if user_choice == '1':
 
      books.displayBooks()
 
-    elif user_choice == '2':
+elif user_choice == '2':
 
     book = input("Enter the name of the book you want to lend: ")
 
 books.lendBook(user_name, book)
 
-elif user_choice == '3':
+ elif user_choice == '3':
 
-book = input("Enter the name of the book you want to add: ")
+  book = input("Enter the name of the book you want to add: ")
 
 books.addBook(book)
 
-elif user_choice == '4':
+ elif user_choice == '4':
 
 book = input("Enter the name of the book you want to return: ")
 
