@@ -18,3 +18,4 @@ label.pack()
 
 textbox = Text(fg= 'green',bg='yellow')
 textbox.pack()
+window.mainloop()
